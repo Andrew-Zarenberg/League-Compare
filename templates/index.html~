@@ -1,0 +1,13 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+    <title>League Compare</title>
+
+  </head>
+  <body>
+
+    {{ d | safe }}
+    
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+  <head>
+
+    <title>League Compare</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
+    <style type="text/css">
+      .num {
+         text-align:center;
+         width:50px;
+      }
+
+      .sorting {
+         font-weight:bold;
+         background:#eef!important;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div style="text-align:center">
+	<h1>League Compare</h1>
+	<br />
+
+	<form id="names">
+	  <table class="table table-bordered">
+	    <tr class="active">
+	      <td style="text-align:center;font-size:25px;">
+		Enter up to 10 usernames to compare below.  Separate multiple usernames with commas.
+	      </td>
+	    </tr>
+	    <tr class="active">
+	      <td style="padding:10px;">
+		<input class="form-control input-lg" placeholder="Ex: User1, User2, User3" type="text" name="players" id="players">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="active" style="text-align:center">
+		<input type="submit" class="btn btn-primary btn-lg" type="submit" value="Search" />
+	      </td>
+	    </tr>
+	  </table>
+	</form>
+      </div>
+
+      <table class="table table-bordered table-striped" id="tab">
+	<tr class="active">
+	  <th>Username</th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('win',1)">Wins</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('lose',2)">Losses</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('kdr',3)">KDR</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('kills',4)">Kills</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('deaths',5)">Deaths</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('assists',6)">Assists</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('minions',7)">Minions</a></th>
+	  <th class="num"><a href="javascript:void(0)" onclick="sort('gold',8)">Gold</a></th>
+	  <th>Last Game Played</th>
+	</tr>
+	<tr>
+	  <td colspan="10">Results will appear here</td>
+	</tr>
+      </table>
+    </div>
+    <div class="col-md-2"></div>
+    
+
+
+  </body>
+</html>

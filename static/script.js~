@@ -1,0 +1,7 @@
+
+
+$("#names").submit(function(e){
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+    $.getJSON("/js?players="+$("#players").val().replace(" ","+"),function(d){
+	
